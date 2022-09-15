@@ -17,7 +17,7 @@ cd maker_cm4
 curl -LO https://raw.githubusercontent.com/CytronTechnologies/MAKER-CM4_Script/main/power_button.py
 
 # Add the command to run the script to rc.local if it's not there yet.
-rc_file = "/etc/rc.local"
+rc_file="/etc/rc.local"
 grep "maker_cm4" $rc_file >/dev/null
 if [ $? -ne 0 ]; then
     # Insert into rc.local before final 'exit 0'
@@ -27,7 +27,7 @@ fi
 
 
 # Configure the config.txt file.
-config_file = "/boot/config.txt"
+config_file="/boot/config.txt"
 
 # Disable USB OTG.
 grep "#otg_mode=1" $config_file >/dev/null
