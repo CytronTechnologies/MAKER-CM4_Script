@@ -9,6 +9,6 @@ GPIO.setwarnings(False)
 GPIO.setup(POWER_BUTTON, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 # Wait for button press and shutdown the CM4 safely.
-white True:
+while True:
     GPIO.wait_for_edge(POWER_BUTTON, GPIO.FALLING)
     os.system("sudo shutdown -h now")
