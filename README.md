@@ -22,10 +22,13 @@ Without this, the power button is unable to wake up the CM4 after shutdown.
 
 ### Flashing CM4 Bootloader from Windows ###
 1. Download and install the [rpiboot tool](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe).
-2. Download and extract one of the bootloader config file. Usually the latest version is preffered. You should get a **"recovery"** folder.
+2. Download and extract one of the bootloader config file. Usually the latest version is preffered. You should get a `recovery` folder.
 3. On the CM4 Maker Board, slide the Run/Boot switch to **BOOT**, then connect the USB-C port to the PC.
-4. Open the command prompt (Press the Windows key and type "cmd") and go to the **"recovery"** folder you just extracted.
-5. Run this command: `"C:\Program Files (x86)\Raspberry Pi\rpiboot.exe" -d ./` to start flashing the bootloader to the EEPROM of CM4.
+4. Open the command prompt (Press the Windows key and type "cmd") and go to the `recovery` folder you just extracted.
+5. Run this command to start flashing the bootloader to the EEPROM of CM4. <br>
+```
+"C:\Program Files (x86)\Raspberry Pi\rpiboot.exe" -d ./
+```
 6. The bootloader is flashed successfully if you see the following message. The ACT LED should be blinking continuously too.
 ```
 RPIBOOT: build-date Jul 18 2022 version 20220718~085937 5a25e04b
