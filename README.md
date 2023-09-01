@@ -13,7 +13,7 @@ curl -L tinyurl.com/setup-maker-cm4 | sudo bash
 - Added the following settings in /boot/config.txt
   - Disable USB OTG and enable the USB Host.
   - Enable I2C and RTC.
-- Setup a script to run in the background to monitor the state of the power button.<br>Shutdown the Pi safely when the button is pressed.
+  - Enable shutdown on GPIO4 falling edge. This will shutdown the Pi safely when the power-buttons are pressed.
 
 ## Modify the Configuration of CM4 Bootloader ##
 Pre-configured bootloader images are available in the `bootloader_config` folder. It can be flashed directly to the CM4.<br>
